@@ -164,7 +164,7 @@
 }
 
 .reveal {
-	background-image: url("/imagenes/fondo-pizarra.png");
+	background-image: url("https://github.com/merka20/presentacion-agencias/blob/gh-pages/imagenes/fondo-pizarra.png");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
