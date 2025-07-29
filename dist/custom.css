@@ -39,9 +39,10 @@
 						top: 20px;
 						transform: rotate(10deg);
 						}
-.reveal .slides {
+.reveal {
   background-image: url("/imagenes/fondo-pizarra.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Opcional, para efecto fijo */
 }
