@@ -2,7 +2,7 @@
 
 body,
 .reveal {
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Rock Salt', cursive !important;
 }
 .chalk-slide {
 	font-family: 'Rock Salt', cursive;
