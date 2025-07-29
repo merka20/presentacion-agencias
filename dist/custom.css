@@ -1,48 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-	.chalk-slide {
-						font-family: 'Permanent Marker', cursive;
-						color: white;
-						font-size: 3rem;
-						position: relative;
-						text-align: center;
-						line-height: 1.4;
-						}
-
-						.chalk-slide .highlight {
-						border: 3px solid white;
-						padding: 0.2em 0.5em;
-						display: inline-block;
-						transform: rotate(-1deg);
-						}
-
-						.chalk-slide img.icon {
-						width: 60px;
-						position: absolute;
-						top: -60px;
-						left: 50%;
-						transform: translateX(-50%);
-						}
-
-						.chalk-slide img.arrow-left {
-						width: 80px;
-						position: absolute;
-						left: -90px;
-						top: 20px;
-						transform: rotate(-10deg);
-						}
-
-						.chalk-slide img.arrow-right {
-						width: 80px;
-						position: absolute;
-						right: -90px;
-						top: 20px;
-						transform: rotate(10deg);
-						}
+body,
 .reveal {
-  background-image: url("/imagenes/fondo-pizarra.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Opcional, para efecto fijo */
+  font-family: 'Sniglet', cursive;
+}
+.chalk-slide {
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+	font-size: 3rem;
+	position: relative;
+	text-align: center;
+	line-height: 1.4;
+}
+
+.chalk-slide .highlight {
+	border: 3px solid white;
+	padding: 0.2em 0.5em;
+	display: inline-block;
+	transform: rotate(-1deg);
+}
+
+.chalk-slide img.icon {
+	width: 60px;
+	position: absolute;
+	top: -60px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.chalk-slide img.arrow-left {
+	width: 80px;
+	position: absolute;
+	left: -90px;
+	top: 20px;
+	transform: rotate(-10deg);
+}
+
+.chalk-slide img.arrow-right {
+	width: 80px;
+	position: absolute;
+	right: -90px;
+	top: 20px;
+	transform: rotate(10deg);
+}
+
+.reveal {
+	background-image: url("/imagenes/fondo-pizarra.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	/* Opcional, para efecto fijo */
+}
+
+.two-columns {
+	display: flex;
+	gap: 3rem;
+	justify-content: space-between;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.column {
+	flex: 1;
+	padding: 1rem;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: left;
+}
+
+/* Opcional: para mantener buen tamaño de texto */
+.reveal .slides section {
+	font-size: 1.4rem;
 }
