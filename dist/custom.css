@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
-body,
+@font-face {
+  font-family: 'ChalkHand';
+  src: url('fonts/ChalkHand.woff') format('woff'),
+       url('fonts/ChalkHand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 .reveal {
-  font-family: 'Rock Salt', cursive !important;
+  font-family: 'ChalkHand', cursive;
+  color: white;
 }
 .chalk-slide {
-	font-family: 'Rock Salt', cursive;
 	color: white;
 	font-size: 3rem;
 	position: relative;
