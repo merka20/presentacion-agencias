@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'ChalkHand';
-  src: url('fonts/ChalkHand.woff') format('woff'),
-       url('fonts/ChalkHand.ttf') format('truetype');
+  src: url('../fonts/ChalkHand.woff') format('woff'),
+       url('../fonts/ChalkHand.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -49,13 +49,28 @@
 }
 
 .card {
-  background: #fff;
+  /*background: #fff;
   border: 1px solid #ddd;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 2.5rem 2rem; /* más espacio */
-  text-align: center;
-  transition: transform 0.3s ease;
+  padding: 2.5rem 2rem;*/ /* más espacio */
+  /*text-align: center;
+  transition: transform 0.3s ease;*/
+    display: flex;
+	flex-direction: column;
+    width: 350px;
+    height: 270px;  
+    background-color: #bdbebe0a;
+    clip-path: path("M 20,0 L 280,0 A 20,20 0,0,1 300,20 L 300,160 A 20,20 0,0,1 280,180 L 185,180 A 20,20 0,0,0 165,200 L 165,250 A 20,20 0,0,1 145,270 L 20,270 A 20,20 0,0,1 0,250 L 0,20 A 20,20 0,0,1 20,0 Z");		  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+	transition: transform 0.3s ease;    	     
+}
+
+.card-content {
+  transform: scale(0.89);
+  transform-origin: center;  
+  margin-top: 2rem;    
 }
 
 .card:hover {
@@ -63,19 +78,20 @@
 }
 
 .icon {
-  font-size: 2.5rem;
+  font-size: 2.9rem;
   margin-bottom: 1.2rem;
+  margin-top: 4rem;  
 }
 
 .reveal .card h3 {
   margin: 0.5rem 0 1rem;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: #000; /* título en negro */
 }
 
 .reveal .card p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 1.5rem;
+  color: #555;  
 }
 
 
