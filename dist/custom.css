@@ -35,8 +35,8 @@
 
 .reveal ul.servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
   padding: 0;
   margin: 2rem 0;
   list-style: none;
@@ -56,14 +56,14 @@
   padding: 2.5rem 2rem;*/ /* más espacio */
   /*text-align: center;
   transition: transform 0.3s ease;*/
-    display: flex;
+  display: flex;
 	flex-direction: column;
-    width: 350px;
-    height: 270px;  
-    background-color: #bdbebe0a;
-    clip-path: path("M 20,0 L 280,0 A 20,20 0,0,1 300,20 L 300,160 A 20,20 0,0,1 280,180 L 185,180 A 20,20 0,0,0 165,200 L 165,250 A 20,20 0,0,1 145,270 L 20,270 A 20,20 0,0,1 0,250 L 0,20 A 20,20 0,0,1 20,0 Z");		  
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
-    overflow: hidden; 
+  width: 350px;
+  height: 270px;  
+  background-color: #e2e4e431;
+  clip-path: path("M 20,0 L 280,0 A 20,20 0,0,1 300,20 L 300,160 A 20,20 0,0,1 280,180 L 185,180 A 20,20 0,0,0 165,200 L 165,250 A 20,20 0,0,1 145,270 L 20,270 A 20,20 0,0,1 0,250 L 0,20 A 20,20 0,0,1 20,0 Z");		  
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
 	transition: transform 0.3s ease;    	     
 }
 
@@ -91,7 +91,7 @@
 
 .reveal .card p {
   font-size: 1.5rem;
-  color: #555;  
+  color: #e4e4e4;  
 }
 
 
@@ -239,3 +239,132 @@
   margin-top: 2rem;
   text-align: center;
 }
+
+/*Menu herramientas */
+.menuweb,.menurrss,.menumantenimiento{
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menuweb .toggleweb, .menurrss .togglerrss, .menumantenimiento .toggleman{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px rgba(0,0,0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #212121;
+  cursor: pointer ; 
+  font-size: 1em;
+  transition: 1.25s;
+  z-index: 2;
+}
+.menuweb.active .toggleweb, .menurrss.active .togglerrss, .menumantenimiento.active .toggleman{
+  transform: rotate(360deg);
+  box-shadow: 0 6px 8px rgba(0,0,0, 0.15), 0 0 0 2px #333, 0 0 0 8px #fff;
+}
+
+.menuweb li, .menurrss li, .menumantenimiento li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  list-style: none;
+  transform: rotate(calc(360deg / 6 * var(--i)))
+             translate(100px)
+             rotate(calc(-360deg / 6 * var(--i)))
+             translate(-50%, -50%);
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+.menurrss li, .menumantenimiento li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  list-style: none;
+  transform: rotate(calc(360deg / 6 * var(--i)))
+             translate(100px)
+             rotate(calc(-360deg / 6 * var(--i)))
+             translate(-50%, -50%);
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.menuweb li a, .menurrss li a, .menumantenimiento li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: var(--clr);
+  border-radius: 50%;
+  color: white;
+  font-size: 1em;
+}
+
+.menuweb.active li, .menurrss.active li, .menumantenimiento.active li {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;  
+}
+.titulo-section{
+  margin-bottom: 2rem;
+}
+.menu-label {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  font-size: 1rem;
+  color: white;
+  pointer-events: none;
+  position: absolute;
+  left: 90px;
+  bottom: 45px;
+}
+
+.menuweb.active .menu-label,.menurrss.active .menu-label, .menumantenimiento.active .menu-label {
+  opacity: 0;
+}
+
+.menuweb:not(.active) .menu-label, .menurrss:not(.active) .menu-label, .menumantenimiento:not(.active) .menu-label {
+  opacity: 1;
+}
+
+.recuadro{
+  background:#77777773;
+  border-radius:13px;
+  padding: 1rem;  
+}
+
+.dropcap {
+  display: inline-block;
+  font-size: 3.5rem;         /* Tamaño grande del número */
+  font-weight: bold;       /* Negrita */
+  color: #000;             /* Color del número (puedes ajustar) */
+  background-color: #e0e0e0; /* Gris claro */
+  border-radius: 50%;      /* Hace el fondo redondo */
+  width: 4rem;           /* Ancho del círculo */
+  height: 4rem;          /* Alto del círculo */
+  text-align: center;      /* Centra horizontalmente el número */
+  line-height: 4rem;     /* Centra verticalmente el número */
+  box-shadow: 0 3px 4px rgba(0,0,0, 0.15);
+}
+
+
